@@ -1,1 +1,2 @@
-# shell-setup
+# Shell CLI tools
+Use with caution

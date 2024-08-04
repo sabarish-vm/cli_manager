@@ -1,0 +1,20 @@
+# List of favorite tools
+* fzf
+* zoxide
+* ripgrep
+* ripgrep-all
+* zellij
+* imgcat
+* eza
+* git-delta
+* fd
+* lazygit
+* bat
+* rnr
+* diskus
+* dust
+* pipe-rename
+* choose 
+* tokei
+* tealdeer
+* viu
