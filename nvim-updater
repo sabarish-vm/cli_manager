@@ -1,32 +1,97 @@
 #!/usr/bin/env sh
 
-if command -v nvim &> /dev/null ; then
+normal() {
+    if command -v nvim /dev/null 2>&1; then
 
-    ins_ver=$(nvim --version | sed -n 1p | grep -E -o 'v(.*)')
-    latest_version=$(curl -Ls -o /dev/null -w %{url_effective} https://github.com/neovim/neovim/releases/latest | rev | cut -f 1 -d '/' | rev)
+        ins_ver=$(nvim --version | sed -n 1p | grep -E -o 'v(.*)')
+        latest_version=$(curl -Ls -o /dev/null -w %\{url_effective\} https://github.com/neovim/neovim/releases/latest | rev | cut -f 1 -d '/' | rev)
 
-    echo "Installed version = $ins_ver"
-    echo "Latest version    = $latest_version"
+        echo "Installed version = $ins_ver"
+        echo "Latest version    = $latest_version"
 
-    read -n 1 -p 'Do you want to update ? (y/N)' choice
+        echo 'Do you want to install ? (y/N)'
+        read -r choice
 
-    if [ "$choice" = "y" -o "$choice" = "Y" ]; then
-        curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-        rm -rf "$HOME/opt/nvim-linux64"
-        tar -C "$HOME/opt" -xzf nvim-linux64.tar.gz
-        rm -rf nvim-linux64.tar.gz
-        rm -rf "$HOME/opt/bin/nvim"
-        ln -s "$HOME/opt/nvim-linux64/bin/nvim" "$HOME/opt/bin/"
+        if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
+            curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+            rm -rf "$HOME/opt/nvim-linux64"
+            tar -C "$HOME/opt" -xzf nvim-linux64.tar.gz
+            rm -rf nvim-linux64.tar.gz
+            rm -rf "$HOME/opt/bin/nvim"
+            ln -s "$HOME/opt/nvim-linux64/bin/nvim" "$HOME/opt/bin/"
+        fi
+
+    else
+        read -r 'Do you want to install it ? (y/N)' choice
+        if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
+            curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+            rm -rf "$HOME/opt/nvim-linux64"
+            tar -C "$HOME/opt" -xzf nvim-linux64.tar.gz
+            rm -rf nvim-linux64.tar.gz
+            rm -rf "$HOME/opt/bin/nvim"
+            ln -s "$HOME/opt/nvim-linux64/bin/nvim" "$HOME/opt/bin/"
+        fi
     fi
+}
 
-else 
-    read -n 1 -p 'Do you want to install it ? (y/N)' choice
-    if [ "$choice" = "y" -o "$choice" = "Y" ] ; then
-        curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-        rm -rf "$HOME/opt/nvim-linux64"
-        tar -C "$HOME/opt" -xzf nvim-linux64.tar.gz
-        rm -rf nvim-linux64.tar.gz
-        rm -rf "$HOME/opt/bin/nvim"
-        ln -s "$HOME/opt/nvim-linux64/bin/nvim" "$HOME/opt/bin/"
+appimage() {
+    if command -v nvim /dev/null 2>&1; then
+        ins_ver=$(nvim --version | sed -n 1p | grep -E -o 'v(.*)')
+        latest_version=$(curl -Ls -o /dev/null -w %\{url_effective\} \
+            https://github.com/neovim/neovim-releases/releases/latest | rev | cut -f 1 -d '/' | rev)
+        echo "Installed version = $ins_ver"
+        echo "Latest version    = $latest_version"
+
+        echo 'Do you want to install ? (y/N)'
+        read -r choice
+
+        if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
+            rm -f "$HOME/opt/nvim.appimage"
+            curl -LO https://github.com/neovim/neovim-releases/releases/latest/download/nvim.appimage \
+                -o "$HOME/opt/nvim.appimage"
+            chmod u+x "$HOME/opt/nvim.appimage"
+            cd "$HOME/opt/" || exit
+            rm -rf "squashfs-root"
+            ./nvim.appimage --appimage-extract
+        fi
+
+    else
+        echo 'Do you want to install ? (y/N)'
+        read -r choice
+
+        if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
+            curl -LO https://github.com/neovim/neovim-releases/releases/latest/download/nvim.appimage \
+                -o "$HOME/opt/nvim.appimage"
+            chmod u+x "$HOME/opt/nvim.appimage"
+            cd "$HOME/opt/" || exit
+            ./nvim.appimage --appimage-extract
+        fi
     fi
+}
+
+# parse argv variables
+if [ -n "$1" ]; then
+    :
+else
+    echo "Choose a variant, either --appimage(unsupported/old glibc) or --main(supported/main)"
 fi
+
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+    --appimage)
+        appimage
+        shift 2
+        ;;
+    --main)
+        normal
+        shift 2
+        ;;
+    -h | --help)
+        usage
+        exit
+        ;;
+    *)
+        normal
+        ;;
+    esac
+done
