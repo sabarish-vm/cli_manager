@@ -1,13 +1,12 @@
-brew install fzf
-brew install zoxide
-####### Install starship prompt
+#!/usr/bin/env bash
 
-echo '##### starship #####'
-if command -v starship &>/dev/null; then
-    :
-else
-    curl -sS https://starship.rs/install.sh | sh
-fi
+######## Install cargo and rust
+#echo '##### rust #####'
+#if command cargo 1>/dev/null 2>/dev/null; then
+#  :
+#else
+#  curl https://sh.rustup.rs -sSf | sh
+#fi
 
 ###### Install eget
 if command -v "eget"; then
@@ -16,5 +15,6 @@ else
     curl -o eget.sh https://zyedidia.github.io/eget.sh
     shasum -a 256 eget.sh # verify with hash below
     bash eget.sh
+    mv eget $HOME/opt/bin/eget/
     rm eget.sh
 fi
