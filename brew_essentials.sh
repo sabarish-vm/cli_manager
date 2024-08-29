@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 brew install fzf
 brew install zoxide
 brew install starship

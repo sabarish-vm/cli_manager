@@ -2,13 +2,13 @@
 
 ### Download nvim from github releases
 echo "Do you want to download and install nvim ? (y/n)"
-read -t 15 -p "Do you want to download and install nvim ? (y/n)" choice
+read -r choice
 
-if [[ "$choice" == "y" | "$choice" == "Y"]] ; then 
-  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-  rm -rf "$HOME/opt/nvim"
-  tar -C "$HOME/opt" -xzf nvim-linux64.tar.gz
-  ln -s "$HOME/opt/nvim-linux64/bin/nvim" "$HOME/opt/bin/"
+if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
+    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+    rm -rf "$HOME/opt/nvim"
+    tar -C "$HOME/opt" -xzf nvim-linux64.tar.gz
+    ln -s "$HOME/opt/nvim-linux64/bin/nvim" "$HOME/opt/bin/"
 fi
 
 #### Lazy Vim configuration

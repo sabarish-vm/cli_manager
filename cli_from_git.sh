@@ -13,7 +13,7 @@ findlatestversion() {
 getgitrelease() {
 
     mkdir -p "${reldir}"
-    cd "${reldir}"
+    cd "${reldir}" || exit
     mkdir contents
     wget "$1" -q
     tar_name=$(echo "$1" | rev | cut -f 1 -d '/' | rev)
