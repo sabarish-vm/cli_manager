@@ -1,0 +1,32 @@
+#!/usr/bin/env sh
+
+if command -v nvim &> /dev/null ; then
+
+    ins_ver=$(nvim --version | sed -n 1p | grep -E -o 'v(.*)')
+    latest_version=$(curl -Ls -o /dev/null -w %{url_effective} https://github.com/neovim/neovim/releases/latest | rev | cut -f 1 -d '/' | rev)
+
+    echo "Installed version = $ins_ver"
+    echo "Latest version    = $latest_version"
+
+    read -n 1 -p 'Do you want to update ? (y/N)' choice
+
+    if [ "$choice" = "y" -o "$choice" = "Y" ]; then
+        curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+        rm -rf "$HOME/opt/nvim-linux64"
+        tar -C "$HOME/opt" -xzf nvim-linux64.tar.gz
+        rm -rf nvim-linux64.tar.gz
+        rm -rf "$HOME/opt/bin/nvim"
+        ln -s "$HOME/opt/nvim-linux64/bin/nvim" "$HOME/opt/bin/"
+    fi
+
+else 
+    read -n 1 -p 'Do you want to install it ? (y/N)' choice
+    if [ "$choice" = "y" -o "$choice" = "Y" ] ; then
+        curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+        rm -rf "$HOME/opt/nvim-linux64"
+        tar -C "$HOME/opt" -xzf nvim-linux64.tar.gz
+        rm -rf nvim-linux64.tar.gz
+        rm -rf "$HOME/opt/bin/nvim"
+        ln -s "$HOME/opt/nvim-linux64/bin/nvim" "$HOME/opt/bin/"
+    fi
+fi
