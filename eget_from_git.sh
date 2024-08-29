@@ -1,7 +1,6 @@
 #/usr/bin/env sh
 
-path="${1}"
-: "${path:=$HOME/opt/eget/}"
+: "${path:=$HOME/opt/bin/eget/}"
 export EGET_BIN="${EGET_BIN:-${path}}"
 mkdir -p "${EGET_BIN}"
 echo "Placing the binaries in ${EGET_BIN}"
@@ -29,3 +28,5 @@ else
 fi
 
 install_missing "BurntSushi/ripgrep"
+install_missing "ismaelgv/rnr"
+install_missing "sharkdp/fd"
