@@ -1,9 +1,9 @@
 #/usr/bin/env sh
 
-: "${path:=$HOME/opt/bin/eget/}"
-export EGET_BIN="${EGET_BIN:-${path}}"
+export EGET_BIN="${EGET_BIN:-$HOME/opt/bin/eget/}}"
 mkdir -p "${EGET_BIN}"
 echo "Placing the binaries in ${EGET_BIN}"
+export PATH="$EGET_BIN:$PATH"
 
 if command -v "eget"; then
     eget --upgrade-only zyedidia/eget
@@ -26,10 +26,3 @@ install_missing() {
 upgrade() {
     eget --upgrade-only "$1"
 }
-
-install_missing "junegunn/fzf"
-install_missing "ajeetdsouza/zoxide"
-install_missing "BurntSushi/ripgrep"
-install_missing "ismaelgv/rnr"
-install_missing "sharkdp/fd"
-install_missing "starship/starship"
