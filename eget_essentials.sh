@@ -11,20 +11,13 @@ else
     curl -o eget.sh https://zyedidia.github.io/eget.sh
     shasum -a 256 eget.sh # verify with hash below
     bash eget.sh
+    mv eget "$EGET_BIN"
     rm eget.sh
 fi
 
-install_missing() {
-    if command -v "${1}"; then
-        :
-    else
-        eget --upgrade-only "$1"
-    fi
-
-}
-install_missing "junegunn/fzf"
-install_missing "ajeetdsouza/zoxide"
-install_missing "BurntSushi/ripgrep"
-install_missing "ismaelgv/rnr"
-install_missing "sharkdp/fd"
-install_missing "starship/starship"
+eget --upgrade-only "junegunn/fzf"
+eget --upgrade-only "ajeetdsouza/zoxide"
+eget --upgrade-only "BurntSushi/ripgrep"
+eget --upgrade-only "ismaelgv/rnr"
+eget --upgrade-only "sharkdp/fd"
+eget --upgrade-only "starship/starship"
