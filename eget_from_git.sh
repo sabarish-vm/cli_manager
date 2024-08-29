@@ -1,9 +1,9 @@
 #/usr/bin/env sh
 
 export EGET_BIN="${EGET_BIN:-$HOME/opt/bin/eget/}"
+export PATH="$EGET_BIN:$PATH"
 mkdir -p "${EGET_BIN}"
 echo "Placing the binaries in ${EGET_BIN}"
-export PATH="$EGET_BIN:$PATH"
 
 if command -v "eget"; then
     eget --upgrade-only zyedidia/eget
