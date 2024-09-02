@@ -1,0 +1,35 @@
+#!/usr/bin/env sh
+
+cd "$(dirname "$0")" || exit
+_force=""
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+    -i | --install)
+        _force="True"
+        shift 1
+        ;;
+    --fzf)
+        _fzf="True"
+        break
+        ;;
+    -*)
+        shift 1
+        ;;
+    *)
+        inp="$1"
+        shift 1
+        ;;
+    esac
+done
+
+if [ -n "$_fzf" ]; then
+    name="$(cat "./awesome_tools.md" | fzf --reverse | cut -d '|' -f 3)"
+    ins_com="eget $name"
+    printf "\n%s\n\n%s\n%s\n\n%s\n" "Binary will be placed in ${EGET_BIN:-.}" \
+        "-----This is a dry run------" "${ins_com}" "rerun with -i to install it"
+else
+    _var="eget $(grep "$inp" "./awesome_tools.md" | tr ' ' '@' | grep "$inp@" | cut -d '|' -f 3 | tr -d '@')"
+    printf "\n%s\n\n%s\n%s\n\n%s\n" "Binary will be placed in ${EGET_BIN:-.}" \
+        "-----This is a dry run------" "${_var}" "rerun with -i to install it"
+    [ -n "$_force" ] && { eval "$_var"; }
+fi

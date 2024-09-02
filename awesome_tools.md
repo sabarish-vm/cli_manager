@@ -1,10 +1,7 @@
-# Table of favorite tools
-* fzf
-* zoxide
-* imgcat
-
 | #Command           | #Github base               | #Name+Link                                                    |
-|---------------     |--------------------------- | -------------                                                 |
+|---------------     |--------------------------- | ------------- 
+| fzf                | junegunn/fzf               | [fzf](https://github.com/junegunn/fzf)                        |
+| z                  | ajeetdsouza/zoxide         | [zoxide](https://github.com/ajeetdsouza/zoxide)               |
 | rg                 | BurntSushi/ripgrep         | [ripgrep](https://github.com/BurntSushi/ripgrep )             |
 | rga                | phiresky/ripgrep-all       | [ripgrep-all](https://github.com/phiresky/ripgrep-all )       |
 | zellij             | zellij-org/zellij          | [zellij](https://github.com/zellij-org/zellij)                |
