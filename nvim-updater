@@ -22,7 +22,8 @@ normal() {
         fi
 
     else
-        read -r 'Do you want to install it ? (y/N)' choice
+        echo 'Do you want to install ? (y/N)'
+        read -r choice
         if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
             curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
             rm -rf "$HOME/opt/nvim-linux64"
@@ -80,11 +81,11 @@ while [ "$#" -gt 0 ]; do
     case "$1" in
     --appimage)
         appimage
-        shift 2
+        shift 1
         ;;
     --main)
         normal
-        shift 2
+        shift 1
         ;;
     -h | --help)
         usage
