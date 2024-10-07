@@ -12,7 +12,7 @@
 | bat                | sharkdp/bat                | [bat](https://github.com/sharkdp/bat)                         |
 | rnr                | ismaelgv/rnr               | [rnr](https://github.com/ismaelgv/rnr)                        |
 | diskus             | sharkdp/diskus             | [diskus](https://github.com/sharkdp/diskus)                   |
-| hyperfine          | sharkdp/hyperfine          | [hyperfine](https://github.com/sharkdp/hyperfine)                   |
+| hyperfine          | sharkdp/hyperfine          | [hyperfine](https://github.com/sharkdp/hyperfine)             |
 | numbat             | sharkdp/numbat             | [numbat](https://github.com/sharkdp/numbat)                   |
 | kalker             | PaddiM8/kalker             | [kalker](https://github.com/PaddiM8/kalker)                   |
 | dust               | bootandy/dust              | [dust](https://github.com/bootandy/dust)                      |

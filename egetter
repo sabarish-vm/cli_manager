@@ -27,15 +27,24 @@ while [ "$#" -gt 0 ]; do
     esac
 done
 
+if [ -z "$inp" ] && [ -z "$_fzf" ]; then
+    echo "Either use --fzf or pass a cli tool of interest"
+    exit 1
+fi
+
 if [ -n "$_fzf" ]; then
     name="$(cat "./awesome_tools.md" | fzf --reverse | cut -d '|' -f 3)"
+    name_len="$(printf %s $name | wc -c | tr -d ' ')"
+    [ "$name_len" -lt 1 ] && { exit 1; }
+
     ins_com="eget $name ${_eget_args}"
-    printf "\n%s\n\n%s\n%s\n\n%s\n" "Downloaded to ${EGET_BIN:-.} or to the directory passed with the flag --to" \
+    printf "\n%s\n\n%s\n%s\n\n%s\n" "Will be downloaded to ${EGET_BIN:-.} or to the directory passed with the flag --to" \
         "-----This is a dry run------" "${ins_com}" "rerun with -i to install it"
+    [ -n "$_force" ] && { eval "$ins_com"; }
 else
     _var="eget $(grep "$inp" "./awesome_tools.md" | tr ' ' '@' | grep "$inp@" | cut -d '|' -f 3 | tr -d '@')"
     _var="${_var} ${_eget_args}"
-    printf "\n%s\n\n%s\n%s\n\n%s\n" "Binary will be placed in ${EGET_BIN:-.}" \
-        "-----This is a dry run------" "${_var}" "rerun with -i to install it"
+    printf "\n%s\n\n%s\n%s\n\n%s\n" "Will be downloaded to ${EGET_BIN:-.} or to the directory passed with the flag --to" \
+        "-----This is a dry run------" "${ins_com}" "rerun with -i to install it"
     [ -n "$_force" ] && { eval "$_var"; }
 fi
