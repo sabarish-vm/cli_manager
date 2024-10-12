@@ -14,11 +14,11 @@ normal() {
 
         if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
             curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-            rm -rf "$HOME/opt/nvim-linux64"
-            tar -C "$HOME/opt" -xzf nvim-linux64.tar.gz
+            rm -rf "$optdir/nvim-linux64"
+            tar -C "$optdir" -xzf nvim-linux64.tar.gz
             rm -rf nvim-linux64.tar.gz
-            rm -rf "$HOME/opt/bin/nvim"
-            ln -s "$HOME/opt/nvim-linux64/bin/nvim" "$HOME/opt/bin/"
+            rm -rf "$optdir/bin/nvim"
+            ln -s "$optdir/nvim-linux64/bin/nvim" "$optdir/bin/"
         fi
 
     else
@@ -26,11 +26,11 @@ normal() {
         read -r choice
         if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
             curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-            rm -rf "$HOME/opt/nvim-linux64"
-            tar -C "$HOME/opt" -xzf nvim-linux64.tar.gz
+            rm -rf "$optdir/nvim-linux64"
+            tar -C "$optdir" -xzf nvim-linux64.tar.gz
             rm -rf nvim-linux64.tar.gz
-            rm -rf "$HOME/opt/bin/nvim"
-            ln -s "$HOME/opt/nvim-linux64/bin/nvim" "$HOME/opt/bin/"
+            rm -rf "$optdir/bin/nvim"
+            ln -s "$optdir/nvim-linux64/bin/nvim" "$optdir/bin/"
         fi
     fi
 }
@@ -47,11 +47,11 @@ appimage() {
         read -r choice
 
         if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
-            rm -f "$HOME/opt/nvim.appimage"
+            rm -f "$optdir/nvim.appimage"
             curl -LO https://github.com/neovim/neovim-releases/releases/latest/download/nvim.appimage \
-                -o "$HOME/opt/nvim.appimage"
-            chmod u+x "$HOME/opt/nvim.appimage"
-            cd "$HOME/opt/" || exit
+                -o "$optdir/nvim.appimage"
+            chmod u+x "$optdir/nvim.appimage"
+            cd "$optdir/" || exit
             rm -rf "squashfs-root"
             ./nvim.appimage --appimage-extract
         fi
@@ -62,30 +62,33 @@ appimage() {
 
         if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
             curl -LO https://github.com/neovim/neovim-releases/releases/latest/download/nvim.appimage \
-                -o "$HOME/opt/nvim.appimage"
-            chmod u+x "$HOME/opt/nvim.appimage"
-            cd "$HOME/opt/" || exit
+                -o "$optdir/nvim.appimage"
+            chmod u+x "$optdir/nvim.appimage"
+            cd "$optdir/" || exit
             ./nvim.appimage --appimage-extract
         fi
     fi
 }
 
 # parse argv variables
-if [ -n "$1" ]; then
-    :
-else
-    echo "Choose a variant, either --appimage(unsupported/old glibc) or --main(supported/main)"
-fi
 
+check=""
+optdir="$HOME/opt"
 while [ "$#" -gt 0 ]; do
     case "$1" in
     --appimage)
         appimage
         shift 1
+        check="1"
         ;;
     --main)
         normal
         shift 1
+        check="1"
+        ;;
+    --opt)
+        optdir="$2"
+        shift 2
         ;;
     -h | --help)
         usage
@@ -96,3 +99,9 @@ while [ "$#" -gt 0 ]; do
         ;;
     esac
 done
+
+if [ -n "$check" ]; then
+    :
+else
+    echo "Choose a variant, either --appimage(unsupported/old glibc) or --main(supported/main)"
+fi
