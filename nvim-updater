@@ -1,13 +1,16 @@
 #!/usr/bin/env sh
 
 normal() {
+    local optdir="$1"
     if command -v nvim /dev/null 2>&1; then
 
         ins_ver=$(nvim --version | sed -n 1p | grep -E -o 'v(.*)')
         latest_version=$(curl -Ls -o /dev/null -w %\{url_effective\} https://github.com/neovim/neovim/releases/latest | rev | cut -f 1 -d '/' | rev)
 
-        echo "Installed version = $ins_ver"
-        echo "Latest version    = $latest_version"
+        echo "Installed version    = $ins_ver"
+        echo "Latest version       = $latest_version"
+        echo "OPT_DIR              = $optdir"
+        echo "BIN_DIR=OPT_DIR/bin  = $optdir/bin"
 
         echo 'Do you want to install ? (y/N)'
         read -r choice
@@ -36,12 +39,16 @@ normal() {
 }
 
 appimage() {
+    local optdir="$1"
     if command -v nvim /dev/null 2>&1; then
         ins_ver=$(nvim --version | sed -n 1p | grep -E -o 'v(.*)')
         latest_version=$(curl -Ls -o /dev/null -w %\{url_effective\} \
             https://github.com/neovim/neovim-releases/releases/latest | rev | cut -f 1 -d '/' | rev)
-        echo "Installed version = $ins_ver"
-        echo "Latest version    = $latest_version"
+
+        echo "Installed version    = $ins_ver"
+        echo "Latest version       = $latest_version"
+        echo "OPT_DIR              = $optdir"
+        echo "BIN_DIR=OPT_DIR/bin  = $optdir/bin"
 
         echo 'Do you want to install ? (y/N)'
         read -r choice
@@ -70,21 +77,26 @@ appimage() {
     fi
 }
 
-# parse argv variables
+usage() {
+    echo "-h,--help for help message"
+    echo "--main for installing the supported versions of nvim"
+    echo "--appimage for installing the unsupported/old glibc dependent version."
+    echo "--opt <Insallation path for nvim>"
+}
 
-check=""
+# parse argv variables
 optdir="$HOME/opt"
+do_appimage=""
+
 while [ "$#" -gt 0 ]; do
     case "$1" in
     --appimage)
-        appimage
+        do_appimage="true"
         shift 1
-        check="1"
         ;;
     --main)
-        normal
+        do_main="true"
         shift 1
-        check="1"
         ;;
     --opt)
         optdir="$2"
@@ -100,8 +112,10 @@ while [ "$#" -gt 0 ]; do
     esac
 done
 
-if [ -n "$check" ]; then
-    :
+if [ -n "$do_main" ]; then
+    normal "$optdir"
+elif [-n "$do_appimage"]; then
+    appimage "$optdir"
 else
     echo "Choose a variant, either --appimage(unsupported/old glibc) or --main(supported/main)"
 fi
