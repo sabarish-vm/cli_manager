@@ -21,3 +21,4 @@
 | tokei              | XAMPPRocky/tokei           | [tokei](https://github.com/XAMPPRocky/tokei)                  |
 | tldr               | dbrgn/tealdeer             | [tealdeer](https://github.com/dbrgn/tealdeer)                 |
 | viu                | atanunq/viu                | [viu](https://github.com/atanunq/viu)                         |
+| btm                | ClementTsang/bottom        | [bottom](https://github.com/ClementTsang/bottom)              |
