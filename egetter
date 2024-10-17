@@ -1,6 +1,14 @@
 #!/usr/bin/env sh
 
-cd "$(dirname "$0")" || exit
+cmd_path=$(command -v egetter)
+if [ -n "$cmd_path" ]; then
+    dir_path="$(dirname $(readlink -f $cmd_path))"
+    md_path="$dir_path/awesome_tools.md"
+else
+    echo "egetter is not in path"
+    md_path="./awesome_tools.md"
+fi
+
 _force=""
 while [ "$#" -gt 0 ]; do
     case "$1" in
@@ -33,7 +41,7 @@ if [ -z "$inp" ] && [ -z "$_fzf" ]; then
 fi
 
 if [ -n "$_fzf" ]; then
-    name="$(cat "./awesome_tools.md" | fzf --reverse | cut -d '|' -f 3)"
+    name="$(cat ${md_path} | fzf --reverse | cut -d '|' -f 3)"
     name_len="$(printf %s $name | wc -c | tr -d ' ')"
     [ "$name_len" -lt 1 ] && { exit 1; }
 
@@ -42,7 +50,7 @@ if [ -n "$_fzf" ]; then
         "-----This is a dry run------" "${ins_com}" "rerun with -i to install it"
     [ -n "$_force" ] && { eval "$ins_com"; }
 else
-    _var="eget $(grep "$inp" "./awesome_tools.md" | tr ' ' '@' | cut -d '|' -f 3 | tr -d '@')"
+    _var="eget $(grep "$inp" "${md_path}" | tr ' ' '@' | cut -d '|' -f 3 | tr -d '@')"
     _var="${_var} ${_eget_args}"
     printf "\n%s\n\n%s\n%s\n\n%s\n" "Will be downloaded to ${EGET_BIN:-.} or to the directory passed with the flag --to" \
         "-----This is a dry run------" "${_var}" "rerun with -i to install it"
