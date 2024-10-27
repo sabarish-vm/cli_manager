@@ -22,3 +22,4 @@
 | tldr               | dbrgn/tealdeer             | [tealdeer](https://github.com/dbrgn/tealdeer)                 |
 | viu                | atanunq/viu                | [viu](https://github.com/atanunq/viu)                         |
 | btm                | ClementTsang/bottom        | [bottom](https://github.com/ClementTsang/bottom)              |
+| shellcheck         | koalaman/shellcheck        | [shellcheck](https://github.com/koalaman/shellcheck)
