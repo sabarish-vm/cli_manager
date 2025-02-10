@@ -24,3 +24,4 @@
 | btm                | ClementTsang/bottom        | [bottom](https://github.com/ClementTsang/bottom)              |
 | shellcheck         | koalaman/shellcheck        | [shellcheck](https://github.com/koalaman/shellcheck)          |
 | eva                | oppiliappan/eva            | [eva](https://github.com/oppiliappan/eva)                     |
+| procs              | dalance/procs              | [procs](https://github.com/dalance/procs)                     |
