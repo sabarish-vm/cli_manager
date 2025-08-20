@@ -46,13 +46,13 @@ if [ -n "$_fzf" ]; then
     [ "$name_len" -lt 1 ] && { exit 1; }
 
     ins_com="eget $name ${_eget_args}"
-    printf "\n%s\n\n%s\n%s\n\n%s\n" "Will be downloaded to ${EGET_BIN:-.} or to the directory passed with the flag --to" \
+    printf "\n%s\n\n%s\n%s\n\n%s\n" "Will be downloaded to ${EGET_BIN:-.} or to the directory passed with the flag --eget --to" \
         "-----This is a dry run------" "${ins_com}" "rerun with -i to install it"
     [ -n "$_force" ] && { eval "$ins_com"; }
 else
     _var="eget $(grep "$inp" "${md_path}" | tr ' ' '@' | cut -d '|' -f 3 | tr -d '@')"
     _var="${_var} ${_eget_args}"
-    printf "\n%s\n\n%s\n%s\n\n%s\n" "Will be downloaded to ${EGET_BIN:-.} or to the directory passed with the flag --to" \
+    printf "\n%s\n\n%s\n%s\n\n%s\n" "Will be downloaded to ${EGET_BIN:-.} or to the directory passed with the flag --eget --to" \
         "-----This is a dry run------" "${_var}" "rerun with -i to install it"
     [ -n "$_force" ] && { eval "$_var"; }
 fi
