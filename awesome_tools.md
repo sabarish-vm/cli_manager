@@ -26,4 +26,6 @@
 | eva                | oppiliappan/eva            | [eva](https://github.com/oppiliappan/eva)                     | ✅      | ✅     |         |
 | procs              | dalance/procs              | [procs](https://github.com/dalance/procs)                     | ✅      | ✅     |         |
 | nvtop              | Syllo/nvtop                | [nvtop](https://github.com/Syllo/nvtop)                       | ❌      | ✅     | ✅      |
-| osc                | theimpostor/osc            | [osc](https://github.com/theimpostor/osc)                     | ✅      | ❌     |         |
+| osc                | theimpostor/osc            | [osc](https://github.com/theimpostor/osc)                     | ✅      | ❌     | ❌      |
+| pet                | knqyf263/pet               | [pet](https://github.com/knqyf263/pet)                        | ✅      | ❌     | ❌      |
+| yazi               | sxyazi/yazi                | [yazi](https://github.com/sxyazi/yazi)                        | ✅      | ✅     | ❌      |
