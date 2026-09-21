@@ -1,31 +1,55 @@
-| # Command          | # Github base              | # Name+Link                                                   | # Eget  | # Brew | # Mamba |
-|---------------     |--------------------------- | --------------------------------------------------------------|-------- |--------|---------|
-| fzf                | junegunn/fzf               | [fzf](https://github.com/junegunn/fzf)                        | ✅      | ✅     |         |
-| z                  | ajeetdsouza/zoxide         | [zoxide](https://github.com/ajeetdsouza/zoxide)               | ✅      | ✅     |         |
-| rg                 | BurntSushi/ripgrep         | [ripgrep](https://github.com/BurntSushi/ripgrep )             | ✅      | ✅     |         |
-| rga                | phiresky/ripgrep-all       | [ripgrep-all](https://github.com/phiresky/ripgrep-all )       | ✅      | ✅     |         |
-| zellij             | zellij-org/zellij          | [zellij](https://github.com/zellij-org/zellij)                | ✅      | ✅     |         |
-| eza                | eza-community/eza          | [eza](https://github.com/eza-community/eza)                   | ✅      | ✅     |         |
-| delta              | dandavison/delta           | [git-delta](https://github.com/dandavison/delta)              | ✅      | ✅     |         |
-| fd                 | sharkdp/fd                 | [fd](https://github.com/sharkdp/fd)                           | ✅      | ✅     |         |
-| lazygit            | jesseduffield/lazygit      | [lazygit](https://github.com/jesseduffield/lazygit)           | ✅      | ✅     |         |
-| bat                | sharkdp/bat                | [bat](https://github.com/sharkdp/bat)                         | ✅      | ✅     |         |
-| rnr                | ismaelgv/rnr               | [rnr](https://github.com/ismaelgv/rnr)                        | ✅      | ✅     |         |
-| diskus             | sharkdp/diskus             | [diskus](https://github.com/sharkdp/diskus)                   | ✅      | ✅     |         |
-| hyperfine          | sharkdp/hyperfine          | [hyperfine](https://github.com/sharkdp/hyperfine)             | ✅      | ✅     |         |
-| numbat             | sharkdp/numbat             | [numbat](https://github.com/sharkdp/numbat)                   | ✅      | ✅     |         |
-| kalker             | PaddiM8/kalker             | [kalker](https://github.com/PaddiM8/kalker)                   | ✅      | ✅     |         |
-| dust               | bootandy/dust              | [dust](https://github.com/bootandy/dust)                      | ✅      | ✅     |         |
-| pipe-rename        | marcusbuffett/pipe-rename  | [pipe-rename](https://github.com/marcusbuffett/pipe-rename)   | ✅      | ✅     |         |
-| choose             | theryangeary/choose        | [choose](https://github.com/theryangeary/choose)              | ✅      | ✅     |         |
-| tokei              | XAMPPRocky/tokei           | [tokei](https://github.com/XAMPPRocky/tokei)                  | ✅      | ✅     |         |
-| tldr               | dbrgn/tealdeer             | [tealdeer](https://github.com/dbrgn/tealdeer)                 | ✅      | ✅     |         |
-| viu                | atanunq/viu                | [viu](https://github.com/atanunq/viu)                         | ✅      | ✅     |         |
-| btm                | ClementTsang/bottom        | [bottom](https://github.com/ClementTsang/bottom)              | ✅      | ✅     |         |
-| shellcheck         | koalaman/shellcheck        | [shellcheck](https://github.com/koalaman/shellcheck)          | ✅      | ✅     |         |
-| eva                | oppiliappan/eva            | [eva](https://github.com/oppiliappan/eva)                     | ✅      | ✅     |         |
-| procs              | dalance/procs              | [procs](https://github.com/dalance/procs)                     | ✅      | ✅     |         |
-| nvtop              | Syllo/nvtop                | [nvtop](https://github.com/Syllo/nvtop)                       | ❌      | ✅     | ✅      |
-| osc                | theimpostor/osc            | [osc](https://github.com/theimpostor/osc)                     | ✅      | ❌     | ❌      |
-| pet                | knqyf263/pet               | [pet](https://github.com/knqyf263/pet)                        | ✅      | ❌     | ❌      |
-| yazi               | sxyazi/yazi                | [yazi](https://github.com/sxyazi/yazi)                        | ✅      | ✅     | ❌      |
+| # Name+Link                                                       | # Github base                 |     | # Binaries | # Brew | # Conda-forge |
+| ----------------------------------------------------------------- | ----------------------------- | --- | ---------- | ------ | ------------- |
+| [bandwhich](https://github.com/imsnif/bandwhich)                  | imsnif/bandwhich              |     | ✅         | ✅     | ❌            |
+| [bat](https://github.com/sharkdp/bat)                             | sharkdp/bat                   |     | ✅         | ✅     | ✅            |
+| [bfs](https://github.com/tavianator/bfs)                          | tavianator/bfs                |     | ❌         | ✅     | ❌            |
+| [bottom](https://github.com/ClementTsang/bottom)                  | ClementTsang/bottom           |     | ✅         | ✅     | ✅            |
+| [chafa](https://github.com/hpjansson/chafa)                       | hpjansson/chafa               |     | ❌         | ✅     | ✅            |
+| [choose](https://github.com/theryangeary/choose)                  | theryangeary/choose           |     | ✅         | ✅     | ✅            |
+| [croc](https://github.com/schollz/croc)                           | schollz/croc                  |     | ✅         | ✅     | ✅            |
+| [diskus](https://github.com/sharkdp/diskus)                       | sharkdp/diskus                |     | ✅         | ✅     | ✅            |
+| [dust](https://github.com/bootandy/dust)                          | bootandy/dust                 |     | ✅         | ✅     | ✅            |
+| [eva](https://github.com/oppiliappan/eva)                         | oppiliappan/eva               |     | ✅         | ✅     | ✅            |
+| [eza](https://github.com/eza-community/eza)                       | eza-community/eza             |     | ✅         | ✅     | ✅            |
+| [fd](https://github.com/sharkdp/fd)                               | sharkdp/fd                    |     | ✅         | ✅     | ✅            |
+| [frogmouth](https://github.com/Textualize/frogmouth)              | Textualize/frogmouth          |     | ❌         | ❌     | ❌            |
+| [fzf](https://github.com/junegunn/fzf)                            | junegunn/fzf                  |     | ✅         | ✅     | ✅            |
+| [git-delta](https://github.com/dandavison/delta)                  | dandavison/delta              |     | ✅         | ✅     | ✅            |
+| [glow](https://github.com/charmbracelet/glow)                     | charmbracelet/glow            |     | ✅         | ✅     | ❌            |
+| [grex](https://github.com/pemistahl/grex)                         | pemistahl/grex                |     | ✅         | ✅     | ✅            |
+| [httrack](https://github.com/xroche/httrack)                      | xroche/httrack                |     | ❌         | ✅     | ❌            |
+| [hyperfine](https://github.com/sharkdp/hyperfine)                 | sharkdp/hyperfine             |     | ✅         | ✅     | ✅            |
+| [jless](https://github.com/PaulJuliusMartinez/jless)              | PaulJuliusMartinez/jless      |     | ✅         | ✅     | ✅            |
+| [jql](https://github.com/yamafaktory/jql)                         | yamafaktory/jql               |     | ✅         | ✅     | ✅            |
+| [kalker](https://github.com/PaddiM8/kalker)                       | PaddiM8/kalker                |     | ✅         | ✅     | ✅            |
+| [lazygit](https://github.com/jesseduffield/lazygit)               | jesseduffield/lazygit         |     | ✅         | ✅     | ✅            |
+| [lolcat](https://github.com/busyloop/lolcat)                      | busyloop/lolcat               |     | ❌         | ✅     | ❌            |
+| [mdcat](https://github.com/BIRSAx2/mdcat)                         | BIRSAx2/mdcat                 |     | ✅         | ✅     | ✅            |
+| [mdless](https://github.com/ttscoff/mdless)                       | ttscoff/mdless                |     | ❌         | ✅     | ❌            |
+| [navi](https://github.com/denisidoro/navi)                        | denisidoro/navi               |     | ✅         | ✅     | ✅            |
+| [netwatch](https://github.com/matthart1983/netwatch)              | matthart1983/netwatch         |     | ✅         | ✅     | ✅            |
+| [numbat](https://github.com/sharkdp/numbat)                       | sharkdp/numbat                |     | ✅         | ✅     | ✅            |
+| [nvtop](https://github.com/Syllo/nvtop)                           | Syllo/nvtop                   |     | ❌         | ✅     | ✅            |
+| [osc](https://github.com/theimpostor/osc)                         | theimpostor/osc               |     | ✅         | ❌     | ❌            |
+| [pet](https://github.com/knqyf263/pet)                            | knqyf263/pet                  |     | ✅         | ✅     | ❌            |
+| [pipe-rename](https://github.com/marcusbuffett/pipe-rename)       | marcusbuffett/pipe-rename     |     | ✅         | ✅     | ✅            |
+| [procs](https://github.com/dalance/procs)                         | dalance/procs                 |     | ✅         | ✅     | ✅            |
+| [pueue](https://github.com/Nukesor/pueue)                         | Nukesor/pueue                 |     | ✅         | ✅     | ✅            |
+| [qsv](https://github.com/jqnatividad/qsv)                         | jqnatividad/qsv               |     | ✅         | ✅     | ✅            |
+| [repgrep](https://github.com/acheronfail/repgrep)                 | acheronfail/repgrep           |     | ✅         | ❌     | ❌            |
+| [ripgrep](https://github.com/BurntSushi/ripgrep)                  | BurntSushi/ripgrep            |     | ✅         | ✅     | ✅            |
+| [ripgrep-all](https://github.com/phiresky/ripgrep-all)            | phiresky/ripgrep-all          |     | ✅         | ✅     | ✅            |
+| [rnr](https://github.com/ismaelgv/rnr)                            | ismaelgv/rnr                  |     | ✅         | ✅     | ✅            |
+| [rush](https://github.com/shenwei356/rush)                        | shenwei356/rush               |     | ✅         | ✅     | ❌            |
+| [rust-parallel](https://github.com/aaronriekenberg/rust-parallel) | aaronriekenberg/rust-parallel |     | ✅         | ✅     | ❌            |
+| [shellcheck](https://github.com/koalaman/shellcheck)              | koalaman/shellcheck           |     | ✅         | ✅     | ✅            |
+| [tealdeer](https://github.com/dbrgn/tealdeer)                     | dbrgn/tealdeer                |     | ✅         | ✅     | ✅            |
+| [timg](https://github.com/hzeller/timg)                           | hzeller/timg                  |     | ✅         | ✅     | ❌            |
+| [tokei](https://github.com/XAMPPRocky/tokei)                      | XAMPPRocky/tokei              |     | ✅         | ✅     | ✅            |
+| [ueberzugpp](https://github.com/jstkdng/ueberzugpp)               | jstkdng/ueberzugpp            |     | ❌         | ✅     | ❌            |
+| [viu](https://github.com/atanunq/viu)                             | atanunq/viu                   |     | ✅         | ✅     | ✅            |
+| [xan](https://github.com/medialab/xan)                            | medialab/xan                  |     | ✅         | ✅     | ✅            |
+| [yank](https://github.com/mptre/yank)                             | mptre/yank                    |     | ❌         | ✅     | ❌            |
+| [yazi](https://github.com/sxyazi/yazi)                            | sxyazi/yazi                   |     | ✅         | ✅     | ✅            |
+| [zellij](https://github.com/zellij-org/zellij)                    | zellij-org/zellij             |     | ✅         | ✅     | ✅            |
+| [zoxide](https://github.com/ajeetdsouza/zoxide)                   | ajeetdsouza/zoxide            |     | ✅         | ✅     | ✅            |
