@@ -17,10 +17,10 @@ Curated list of terminal CLI tools, categorized by purpose.
 
 ## Editors
 
-| Tool                                            | GitHub             | Binaries | Brew | Conda-forge |
-| ----------------------------------------------- | ------------------ | :------: | :--: | :---------: |
-| [neovim](https://github.com/neovim/neovim)      | neovim/neovim      |    ✅    |  ✅  |     ✅      |
-| [helix](https://github.com/helix-editor/helix)  | helix-editor/helix |    ✅    |  ✅  |     ✅      |
+| Tool                                           | GitHub             | Binaries | Brew | Conda-forge |
+| ---------------------------------------------- | ------------------ | :------: | :--: | :---------: |
+| [neovim](https://github.com/neovim/neovim)     | neovim/neovim      |    ✅    |  ✅  |     ✅      |
+| [helix](https://github.com/helix-editor/helix) | helix-editor/helix |    ✅    |  ✅  |     ✅      |
 
 ## Search & Find
 
@@ -41,6 +41,7 @@ Curated list of terminal CLI tools, categorized by purpose.
 | [btop](https://github.com/aristocratos/btop)            | aristocratos/btop       |    ✅    |  ✅  |     ✅      |
 | [fastfetch](https://github.com/fastfetch-cli/fastfetch) | fastfetch-cli/fastfetch |    ✅    |  ✅  |     ✅      |
 | [htop](https://github.com/htop-dev/htop)                | htop-dev/htop           |    ❌    |  ✅  |     ✅      |
+| [ismc](https://github.com/dkorunic/iSMC)                | dkorunic/iSMC           |    ✅    |  ✅  |     ❌      |
 | [macchina](https://github.com/Macchina-CLI/macchina)    | Macchina-CLI/macchina   |    ✅    |  ✅  |     ✅      |
 | [macmon](https://github.com/vladkens/macmon)            | vladkens/macmon         |    ✅    |  ✅  |     ❌      |
 | [netwatch](https://github.com/matthart1983/netwatch)    | matthart1983/netwatch   |    ✅    |  ✅  |     ✅      |
@@ -57,13 +58,16 @@ Curated list of terminal CLI tools, categorized by purpose.
 
 ## Text Processing
 
-| Tool                                                        | GitHub                    | Binaries | Brew | Conda-forge |
-| ----------------------------------------------------------- | ------------------------- | :------: | :--: | :---------: |
-| [bat](https://github.com/sharkdp/bat)                       | sharkdp/bat               |    ✅    |  ✅  |     ✅      |
-| [choose](https://github.com/theryangeary/choose)            | theryangeary/choose       |    ✅    |  ✅  |     ✅      |
-| [grex](https://github.com/pemistahl/grex)                   | pemistahl/grex            |    ✅    |  ✅  |     ✅      |
-| [pipe-rename](https://github.com/marcusbuffett/pipe-rename) | marcusbuffett/pipe-rename |    ✅    |  ✅  |     ✅      |
-| [sd](https://github.com/chmln/sd)                           | chmln/sd                  |    ✅    |  ✅  |     ✅      |
+| Tool                                                        | GitHub                     | Binaries | Brew | Conda-forge |
+| ----------------------------------------------------------- | -------------------------- | :------: | :--: | :---------: |
+| [bat](https://github.com/sharkdp/bat)                       | sharkdp/bat                |    ✅    |  ✅  |     ✅      |
+| [choose](https://github.com/theryangeary/choose)            | theryangeary/choose        |    ✅    |  ✅  |     ✅      |
+| [gawk](https://github.com/gnu-mirror-unofficial/gawk)       | gnu-mirror-unofficial/gawk |    ❌    |  ✅  |     ✅      |
+| [gnu-sed](https://github.com/gnu-mirror-unofficial/sed)     | gnu-mirror-unofficial/sed  |    ❌    |  ✅  |     ❌      |
+| [grex](https://github.com/pemistahl/grex)                   | pemistahl/grex             |    ✅    |  ✅  |     ✅      |
+| [pipe-rename](https://github.com/marcusbuffett/pipe-rename) | marcusbuffett/pipe-rename  |    ✅    |  ✅  |     ✅      |
+| [rgx](https://github.com/brevity1swos/rgx)                  | brevity1swos/rgx           |    ✅    |  ✅  |     ❌      |
+| [sd](https://github.com/chmln/sd)                           | chmln/sd                   |    ✅    |  ✅  |     ✅      |
 
 ## Data Formats (JSON / YAML / CSV)
 
@@ -85,6 +89,7 @@ Curated list of terminal CLI tools, categorized by purpose.
 | -------------------------------------------- | -------------- | :------: | :--: | :---------: |
 | [aria2](https://github.com/aria2/aria2)      | aria2/aria2    |    ❌    |  ✅  |     ✅      |
 | [croc](https://github.com/schollz/croc)      | schollz/croc   |    ✅    |  ✅  |     ✅      |
+| [curl](https://github.com/curl/curl)         | curl/curl      |    ✅    |  ✅  |     ✅      |
 | [eget](https://github.com/zyedidia/eget)     | zyedidia/eget  |    ✅    |  ✅  |     ❌      |
 | [ghgrab](https://github.com/abhixdd/ghgrab)  | abhixdd/ghgrab |    ✅    |  ❌  |     ✅      |
 | [httrack](https://github.com/xroche/httrack) | xroche/httrack |    ❌    |  ✅  |     ❌      |
@@ -95,9 +100,12 @@ Curated list of terminal CLI tools, categorized by purpose.
 | Tool                                                | GitHub                        | Binaries | Brew | Conda-forge |
 | --------------------------------------------------- | ----------------------------- | :------: | :--: | :---------: |
 | [chafa](https://github.com/hpjansson/chafa)         | hpjansson/chafa               |    ❌    |  ✅  |     ✅      |
+| [djview4](https://github.com/DjVuLibre/DjView4)     | DjVuLibre/DjView4             |    ❌    |  ✅  |     ❌      |
 | [exiftool](https://exiftool.org)                    | exiftool.org (no GitHub repo) |    ❌    |  ✅  |     ✅      |
 | [fnt](https://github.com/alexmyczko/fnt)            | alexmyczko/fnt                |    ❌    |  ✅  |     ❌      |
 | [lolcat](https://github.com/busyloop/lolcat)        | busyloop/lolcat               |    ❌    |  ✅  |     ❌      |
+| [mpv](https://github.com/mpv-player/mpv)            | mpv-player/mpv                |    ✅    |  ✅  |     ✅      |
+| [musikcube](https://github.com/clangen/musikcube)   | clangen/musikcube             |    ✅    |  ✅  |     ❌      |
 | [resvg](https://github.com/linebender/resvg)        | linebender/resvg              |    ✅    |  ✅  |     ✅      |
 | [termusic](https://github.com/tramhao/termusic)     | tramhao/termusic              |    ✅    |  ✅  |     ❌      |
 | [timg](https://github.com/hzeller/timg)             | hzeller/timg                  |    ✅    |  ✅  |     ❌      |
@@ -108,6 +116,7 @@ Curated list of terminal CLI tools, categorized by purpose.
 
 | Tool                                                     | GitHub                | Binaries | Brew | Conda-forge |
 | -------------------------------------------------------- | --------------------- | :------: | :--: | :---------: |
+| [bookokrat](https://github.com/bugzmanov/bookokrat)      | bugzmanov/bookokrat   |    ✅    |  ✅  |     ❌      |
 | [frogmouth](https://github.com/Textualize/frogmouth)     | Textualize/frogmouth  |    ❌    |  ❌  |     ❌      |
 | [glow](https://github.com/charmbracelet/glow)            | charmbracelet/glow    |    ✅    |  ✅  |     ❌      |
 | [grip](https://github.com/joeyespo/grip)                 | joeyespo/grip         |    ❌    |  ✅  |     ✅      |
@@ -123,6 +132,7 @@ Curated list of terminal CLI tools, categorized by purpose.
 | [pdf2svg](https://github.com/dbushell/pdf2svg)           | dbushell/pdf2svg      |    ❌    |  ✅  |     ✅      |
 | [pdfcpu](https://github.com/pdfcpu/pdfcpu)               | pdfcpu/pdfcpu         |    ✅    |  ✅  |     ✅      |
 | [diff-pdf](https://github.com/vslavik/diff-pdf)          | vslavik/diff-pdf      |    ❌    |  ✅  |     ❌      |
+| [doxx](https://github.com/bgreenwell/doxx)               | bgreenwell/doxx       |    ✅    |  ✅  |     ✅      |
 | [presenterm](https://github.com/mfontanini/presenterm)   | mfontanini/presenterm |    ✅    |  ✅  |     ❌      |
 
 ## Diagrams & Typesetting
@@ -130,22 +140,32 @@ Curated list of terminal CLI tools, categorized by purpose.
 | Tool                                                         | GitHub                        | Binaries | Brew | Conda-forge |
 | ------------------------------------------------------------ | ----------------------------- | :------: | :--: | :---------: |
 | [d2](https://github.com/terrastruct/d2)                      | terrastruct/d2                |    ✅    |  ✅  |     ✅      |
+| [gnuplot](https://github.com/gnuplot/gnuplot)                | gnuplot/gnuplot               |    ❌    |  ✅  |     ✅      |
+| [graphviz](https://github.com/graphviz/graphviz)             | graphviz/graphviz             |    ❌    |  ✅  |     ✅      |
 | [tectonic](https://github.com/tectonic-typesetting/tectonic) | tectonic-typesetting/tectonic |    ✅    |  ✅  |     ✅      |
 | [typst](https://github.com/typst/typst)                      | typst/typst                   |    ✅    |  ✅  |     ✅      |
 
 ## Git & Development
 
-| Tool                                                     | GitHub                    | Binaries | Brew | Conda-forge |
-| -------------------------------------------------------- | ------------------------- | :------: | :--: | :---------: |
-| [gh](https://github.com/cli/cli)                         | cli/cli                   |    ✅    |  ✅  |     ✅      |
-| [git-delta](https://github.com/dandavison/delta)         | dandavison/delta          |    ✅    |  ✅  |     ✅      |
-| [git-ignore](https://github.com/sondr3/git-ignore)       | sondr3/git-ignore         |    ✅    |  ✅  |     ❌      |
-| [jj](https://github.com/jj-vcs/jj)                       | jj-vcs/jj                 |    ✅    |  ✅  |     ✅      |
-| [lazygit](https://github.com/jesseduffield/lazygit)      | jesseduffield/lazygit     |    ✅    |  ✅  |     ✅      |
-| [shellcheck](https://github.com/koalaman/shellcheck)     | koalaman/shellcheck       |    ✅    |  ✅  |     ✅      |
-| [tokei](https://github.com/XAMPPRocky/tokei)             | XAMPPRocky/tokei          |    ✅    |  ✅  |     ✅      |
-| [nixfmt](https://github.com/NixOS/nixfmt)                | NixOS/nixfmt              |    ✅    |  ✅  |     ❌      |
-| [Rustlens](https://github.com/yashksaini-coder/Rustlens) | yashksaini-coder/Rustlens |    ✅    |  ❌  |     ❌      |
+| Tool                                                                                 | GitHub                                    | Binaries | Brew | Conda-forge |
+| ------------------------------------------------------------------------------------ | ----------------------------------------- | :------: | :--: | :---------: |
+| [act](https://github.com/nektos/act)                                                 | nektos/act                                |    ✅    |  ✅  |     ❌      |
+| [automake](https://github.com/autotools-mirror/automake)                             | autotools-mirror/automake                 |    ❌    |  ✅  |     ❌      |
+| [bear](https://github.com/rizsotto/Bear)                                             | rizsotto/Bear                             |    ❌    |  ✅  |     ✅      |
+| [cmake](https://github.com/Kitware/CMake)                                            | Kitware/CMake                             |    ✅    |  ✅  |     ✅      |
+| [cppcheck](https://github.com/cppcheck-opensource/cppcheck)                          | cppcheck-opensource/cppcheck              |    ✅    |  ✅  |     ✅      |
+| [gdb](https://github.com/gnutools/binutils-gdb)                                      | gnutools/binutils-gdb                     |    ❌    |  ✅  |     ✅      |
+| [gh](https://github.com/cli/cli)                                                     | cli/cli                                   |    ✅    |  ✅  |     ✅      |
+| [git-delta](https://github.com/dandavison/delta)                                     | dandavison/delta                          |    ✅    |  ✅  |     ✅      |
+| [git-ignore](https://github.com/sondr3/git-ignore)                                   | sondr3/git-ignore                         |    ✅    |  ✅  |     ❌      |
+| [include-what-you-use](https://github.com/include-what-you-use/include-what-you-use) | include-what-you-use/include-what-you-use |    ✅    |  ✅  |     ✅      |
+| [jj](https://github.com/jj-vcs/jj)                                                   | jj-vcs/jj                                 |    ✅    |  ✅  |     ✅      |
+| [lazygit](https://github.com/jesseduffield/lazygit)                                  | jesseduffield/lazygit                     |    ✅    |  ✅  |     ✅      |
+| [ninja](https://github.com/ninja-build/ninja)                                        | ninja-build/ninja                         |    ✅    |  ✅  |     ✅      |
+| [shellcheck](https://github.com/koalaman/shellcheck)                                 | koalaman/shellcheck                       |    ✅    |  ✅  |     ✅      |
+| [tokei](https://github.com/XAMPPRocky/tokei)                                         | XAMPPRocky/tokei                          |    ✅    |  ✅  |     ✅      |
+| [nixfmt](https://github.com/NixOS/nixfmt)                                            | NixOS/nixfmt                              |    ✅    |  ✅  |     ❌      |
+| [Rustlens](https://github.com/yashksaini-coder/Rustlens)                             | yashksaini-coder/Rustlens                 |    ✅    |  ❌  |     ❌      |
 
 ## Shell & Terminal
 
@@ -191,6 +211,7 @@ Curated list of terminal CLI tools, categorized by purpose.
 | --------------------------------------------------------------------------- | ----------------------------------- | :------: | :--: | :---------: |
 | [age](https://github.com/FiloSottile/age)                                   | FiloSottile/age                     |    ✅    |  ✅  |     ✅      |
 | [bandwhich](https://github.com/imsnif/bandwhich)                            | imsnif/bandwhich                    |    ✅    |  ✅  |     ❌      |
+| [clamav](https://github.com/Cisco-Talos/clamav)                             | Cisco-Talos/clamav                  |    ❌    |  ✅  |     ❌      |
 | [nmap](https://github.com/nmap/nmap)                                        | nmap/nmap                           |    ❌    |  ✅  |     ❌      |
 | [osc](https://github.com/theimpostor/osc)                                   | theimpostor/osc                     |    ✅    |  ❌  |     ❌      |
 | [speedtest-cli](https://github.com/sivel/speedtest-cli)                     | sivel/speedtest-cli                 |    ❌    |  ✅  |     ✅      |
@@ -206,11 +227,14 @@ Curated list of terminal CLI tools, categorized by purpose.
 
 ## Weather
 
-| Tool                                                  | GitHub              | Binaries | Brew | Conda-forge |
-| ----------------------------------------------------- | ------------------- | :------: | :--: | :---------: |
-| [ansiweather](https://github.com/fcambus/ansiweather) | fcambus/ansiweather |    ❌    |  ✅  |     ❌      |
-| [astroterm](https://github.com/da-luce/astroterm)     | da-luce/astroterm   |    ❌    |  ✅  |     ❌      |
-| [rustormy](https://github.com/Tairesh/rustormy)       | Tairesh/rustormy    |    ✅    |  ❌  |     ❌      |
+| Tool                                                    | GitHub                  | Binaries | Brew | Conda-forge |
+| ------------------------------------------------------- | ----------------------- | :------: | :--: | :---------: |
+| [ansiweather](https://github.com/fcambus/ansiweather)   | fcambus/ansiweather     |    ❌    |  ✅  |     ❌      |
+| [astroterm](https://github.com/da-luce/astroterm)       | da-luce/astroterm       |    ❌    |  ✅  |     ❌      |
+| [countryfetch](https://github.com/nik-rev/countryfetch) | nik-rev/countryfetch    |    ✅    |  ✅  |     ❌      |
+| [lyn](https://src.timharek.no/tim/lyn)                  | src.timharek.no/tim/lyn |    ❌    |  ✅  |     ❌      |
+| [rustormy](https://github.com/Tairesh/rustormy)         | Tairesh/rustormy        |    ✅    |  ❌  |     ❌      |
+| [weathr](https://github.com/Veirt/weathr)               | Veirt/weathr            |    ✅    |  ✅  |     ❌      |
 
 ## Archiving & Compression
 
