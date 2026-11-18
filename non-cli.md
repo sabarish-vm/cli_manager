@@ -8,5 +8,6 @@ These packages are libraries, runtimes, GUI applications, or meta-packages — n
 | **neovide**         | GUI app   | Neovim GUI client                        |
 | **opencode**        | Other     | OpenCode harness (the tool running this) |
 | **pcre**            | C library | PCRE regex library (not CLI tool)        |
+| **VimR**            | GUI app   | Neovim GUI for macOS in Swift            |
 | **zsh-completions** | Config    | Zsh completion scripts                   |
 
